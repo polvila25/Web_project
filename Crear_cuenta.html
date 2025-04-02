@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" type="text/css" href="/VISTA/crear_cuenta.css">
+</head>
+<body>
+    <div id="register">
+        <h3>Crear Cuenta</h3>
+        
+        <form id="registerForm" method="post" action="/controllador/crear_cuenta.php">
+
+            <section id="Name">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required pattern="[A-Za-z\s]+" title="Sólo caracteres y espacios">
+            </section>
+
+            <section id="Email">
+                <label for="email">Dirección de correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            </section>
+
+            <section id="Password">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
+            </section>
+
+            <section id="Adreca">
+                <label for="adreca">Dirección</label>
+                <input type="text" id="adreca" name="adreca" placeholder="Tu dirección" maxlength="30" required>
+            </section>
+
+            <section id="Poblacio">
+                <label for="poblacio">Población</label>
+                <input type="text" id="poblacio" name="poblacio" placeholder="Tu población" maxlength="30" required>
+            </section>
+
+            <section id="CodiPostal">
+                <label for="codi_postal">Código Postal</label>
+                <input type="text" id="codi_postal" name="codi_postal" placeholder="Tu código postal" pattern="^\d{5}$" required title="Debe contener 5 dígitos">
+            </section>
+
+            <section id="ProfileImage">
+				<label for="profile_image">Imagen de Perfil</label>
+				<input type="file" id="profile_image" name="profile_image" accept="image/jpeg, image/png">
+			</section>
+
+            <section id="Submit">
+                <button type="submit">Registrar</button>
+            </section>
+
+        </form>
+    </div>
+</body>
+</html>
